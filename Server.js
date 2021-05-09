@@ -19,23 +19,24 @@ next();
 });
 
 const url = "https://www.codingame.com/services/Leaderboards/getFilteredChallengeTeamLeaderboard";
-const jsonBody  = `["challengeName","challengeId",{"active":true,"column":"KEYWORD","filter":"NoConsulting"},"COMPANY",null]`;
+const jsonBody  = `["challengeName","userId",{"active":true,"column":"KEYWORD","filter":"NoConsulting"},"COMPANY",null]`;
 
 /** Getting France rank. */
-app.get('/:challengeName/:challengeId/france', async function(req,res){
+app.get('/:challengeName/:userId/france', async function(req,res){
 
    let body = jsonBody.replace("challengeName",req.params.challengeName);
-   body = body.replace("challengeId",req.params.challengeId);
+   body = body.replace("userId",req.params.userId);
    body = body.replace("null","FR");
 
    res.send( await getRanking(url,body));
 });
 
 /** Getting world rank. */
-app.get('/:challengeName/:challengeId/world', async function(req,res){
+app.get('/:challengeName/:userId/world', async function(req,res){
 
     let body = jsonBody.replace("challengeName",req.params.challengeName);
-    body = body.replace("challengeId",req.params.challengeId);
+    body = body.replace("userId",req.params.userId);
+   
     res.send( await getRanking(url,body));
 });
 
