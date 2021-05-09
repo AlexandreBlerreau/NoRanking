@@ -10,10 +10,10 @@ Url d'appel utilisée : (POST) :    `https://www.codingame.com/services/Leaderbo
 
 Contenu du body :
 
-    ["challengeName","ChallengeId",{"active":true,"column":"KEYWORD","filter":"NoConsulting"},"COMPANY","france"]
+    ["challengeName","userId",{"active":true,"column":"KEYWORD","filter":"NoConsulting"},"COMPANY","france"]
 
 > ChallengeName : Nom du challenge définie par le site. Exemple : spring-challenge-2021
-> ChallengeId : Identifiant d'un compte utilisateur CodingGame. Exemple : 91c2791a62d4a5d50707b89cfb8418102618204
+> userId : Identifiant d'un compte utilisateur CodingGame. Exemple : 91c2791a62d4a5d50707b89cfb8418102618204
 > Null : Peut-être remplacé par l'indentifiant du pays : "FR"
 
 ## Lancement
